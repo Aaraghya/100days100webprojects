@@ -34,6 +34,9 @@
                 <button class="selector-btn" data-structure="linkedlist">
                     <span class="btn-label">Linked List</span>
                 </button>
+              <button class="selector-btn" data-structure="tree">
+                    <span class="btn-label">Tree</span>
+                </button>
             </div>
             <div id="comingSoonToast" class="toast"></div>
         </section>
@@ -370,6 +373,8 @@
 
             </div>
 
+          
+
             <!-- Status Display -->
             <div id="llStatus" class="status-display hidden"></div>
 
@@ -390,6 +395,66 @@
                     <button class="info-btn ll-learn-btn" data-ll-learn="pointer">Pointer</button>
                 </div>
                 <div class="info-panel hidden" id="llLearnPanel"></div>
+            </div>
+
+        </section>
+
+      <!-- Tree Visualizer -->
+        <section class="visualizer-section" data-structure="tree">
+
+            <div class="visualizer-header tree-header">
+                <h2>Tree Visualization</h2>
+                <p class="structure-summary tree-definition-panel" id="treeDefinitionText"></p>
+            </div>
+
+            <div class="tree-visualization-panel">
+                <div class="tree-node-meta">
+                    <span class="tree-meta-label">Node Count</span>
+                    <span class="tree-meta-value" id="treeNodeCount">0</span>
+                </div>
+                <div class="tree-stage" id="treeStage">
+                    <div class="tree-canvas" id="treeCanvas">
+                        <svg class="tree-svg" id="treeSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+                        <div class="tree-nodes-layer" id="treeNodesLayer"></div>
+                        <div class="tree-empty-state" id="treeEmptyState">Empty Tree</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tree-controls-grid">
+                <div class="tree-operation-card">
+                    <h3>Insert Node</h3>
+                    <div class="tree-input-group">
+                        <input type="number" id="treeInput" placeholder="Enter value..." class="tree-input">
+                        <button class="operation-btn" id="treeInsertBtn"><span>Insert</span></button>
+                    </div>
+                    <div id="treeInsertError" class="error-message"></div>
+                </div>
+
+                <div class="tree-operation-card">
+                    <h3>Generate Tree</h3>
+                    <button class="operation-btn" id="treeGenerateBtn"><span>Generate</span></button>
+                </div>
+
+                <div class="tree-operation-card">
+                    <h3>Reset</h3>
+                    <button class="operation-btn" id="treeResetBtn"><span>Reset</span></button>
+                </div>
+            </div>
+
+            <div id="treeStatus" class="status-display hidden"></div>
+
+            <div class="info-section">
+                <h3>Learn Tree</h3>
+                <div class="info-buttons tree-learn-buttons">
+                    <button class="info-btn tree-learn-btn" data-tree-learn="bst">BST</button>
+                    <button class="info-btn tree-learn-btn" data-tree-learn="node">Node</button>
+                    <button class="info-btn tree-learn-btn" data-tree-learn="root">Root</button>
+                    <button class="info-btn tree-learn-btn" data-tree-learn="leaf">Leaf</button>
+                    <button class="info-btn tree-learn-btn" data-tree-learn="insert">Insertion</button>
+                    <button class="info-btn tree-learn-btn" data-tree-learn="height">Height</button>
+                </div>
+                <div class="info-panel hidden" id="treeLearnPanel"></div>
             </div>
 
         </section>
